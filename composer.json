@@ -1,0 +1,35 @@
+{
+  "name": "vinyguedess/datatype",
+  "description": "We know PHP is a shit of language, so here is a datatype",
+  "authors": [
+    {
+      "name": "Vinicius Guedes",
+      "email": "viniciusgued@gmail.com"
+    }
+  ],
+
+  "require": {},
+  "require-dev": {
+    "php": ">=5.4",
+    "phpunit/phpunit": "^4.8"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "DataType\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DataType\\Tests\\": "tests/"
+    }
+  },
+
+  "scripts": {
+    "post-install-cmd": "composer run-script post-update-cmd",
+    "post-update-cmd": [
+        "cp -avn phpunit.xml.dist ./phpunit.xml"
+    ],
+    "test": "phpunit -c phpunit.xml"
+  }
+}

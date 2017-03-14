@@ -1,0 +1,8 @@
+# App files and folders
+composer.lock
+phpunit.xml
+vendor/
+
+# IDE and OS files and folders
+.idea/
+nbproject/
